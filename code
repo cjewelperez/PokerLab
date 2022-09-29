@@ -1,0 +1,22 @@
+public class Database {
+
+	public static final String PARAMETERS = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+
+	public static final String USERNAME = "jahlers";
+	public static final String PASSWORD = "tf230Qwe";
+	public static final String URL = "jdbc:mysql://cse.unl.edu/" + USERNAME + PARAMETERS;
+
+// This constructor is my connection factory. So I can just call this instead of having to type in everything again everytime I make a new
+//	connection in another Class.
+	public static Connection openConn() {
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		} catch (SQLException e) {
+			System.err.println("cannot get connection");
+			throw new RuntimeException(e);
+
+		}
+		return conn;
+	}
+}
