@@ -1,4 +1,27 @@
 ﻿<Properties StartupConfiguration="{7C9A1CBE-204A-484B-B87A-FB55E0CA7DD2}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConnectionAccessor.cs">
+    <Files>
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="ConnectionAccessor.cs" Line="8" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="361DatabaseSchemaAssignment" expanded="True">
+            <Node name="361DatabaseSchemaAssignment" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.361DatabaseSchemaAssignment FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.361DatabaseSchemaAssignment FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
