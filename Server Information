@@ -2,3 +2,5 @@ Server Information:
 
 Name: example_sql_server
 Password: Strong.Pwd-123
+
+Connecting to Server (Terminal Commmand): mssql -u sa -p Strong.Pwd-123
