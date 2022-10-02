@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Configuration; 
+using System.Configuration;
+
+
 namespace _361DatabaseSchemaAssignment
 {
     public class ConnectionAccessor
@@ -19,20 +21,20 @@ namespace _361DatabaseSchemaAssignment
             else
             {
                 Environment.Exit(0);
-                Console.WriteLine("An invalid database connection name was entered."); 
+                Console.WriteLine("An invalid database connection string was entered."); 
             }
             return connection; 
         }
 
         // This method establishes a connection to the MSSQL server instance
 
-        public static void TestDatabaseConnection(string connection)
+        private void TestDatabaseConnection(string connection)
         {
-            // TODO: 
+            // TODO:
+
+            // SqlConnection conn = new SqlConnection(ConnectionAccessor.GetConnectionString("DatabaseConnection")); 
+            
         }
-
-
-
     }
 }
 
