@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Configuration;
+using System.Data; 
+using System.Data.SqlClient;
+using System.Web;
 
 
 namespace _361DatabaseSchemaAssignment
@@ -9,31 +12,33 @@ namespace _361DatabaseSchemaAssignment
 
         // This method retrieves and stores the database connection string if the correct name is provided
 
-        public static string GetConnectionString(string keyname)
+        public  string GetConnectionString(string keyname)
         {
             string connection = string.Empty;
 
-            if(keyname.Equals("DatabaseConnection"))
+            switch (keyname)
             {
-                connection = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
-            }
+                case "DatabaseConnection":
+                    connection = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
+                    break; 
 
-            else
-            {
-                Environment.Exit(0);
-                Console.WriteLine("An invalid database connection string was entered."); 
+                default:
+                    Console.WriteLine("An invalid database connection string was entered."); 
+                    break; 
             }
             return connection; 
         }
 
         // This method establishes a connection to the MSSQL server instance
 
-        private void TestDatabaseConnection(string connection)
+        public static void TestDatabaseConnection()
         {
-            // TODO:
-
-            // SqlConnection conn = new SqlConnection(ConnectionAccessor.GetConnectionString("DatabaseConnection")); 
-            
+            SqlConnection con = new SqlConnection(ConnectionAccessor.GetConnectionString("DatabaseConnection"));
+            con.Open();
+            Console.WriteLine("Connection to server was successful"); 
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Employee", con);
+            dataAdapter.Fill(dataTable);
         }
     }
 }
